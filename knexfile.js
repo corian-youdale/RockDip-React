@@ -3,45 +3,50 @@
 // require & congif dotenv package here inorder for CLI tools to populate env vars correctly.
 // require.apply('dotenv').config(); 
 
-module.exports = {
+const path = require('path')
 
+module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
+      filename: path.join(__dirname, 'dev.sqlite3')
+    },
+    useNullAsDefault: true,
+    migrations: {
+      directory: __dirname + '/server/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/server/db/seeds/'
     }
   },
 
-  staging: {
-    client: 'postgresql',
+  test: {
+    client: 'sqlite3',
     connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
+      filename: ':memory:'
     },
-    pool: {
-      min: 2,
-      max: 10
-    },
+    useNullAsDefault: true,
     migrations: {
-      tableName: 'knex_migrations'
+      directory: __dirname + '/server/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/server/db/seeds/'
     }
   },
 
   production: {
     client: 'postgresql',
-    connection: {
-      database: 'my_db',
-      user:     'username',
-      password: 'password'
-    },
+    connection: process.env.DATABASE_URL,
     pool: {
       min: 2,
       max: 10
     },
     migrations: {
+      directory: __dirname + '/server/db/migrations',
       tableName: 'knex_migrations'
+    },
+    seeds: {
+      directory: __dirname + '/server/db/seeds/'
     }
   }
-
-};
+}
