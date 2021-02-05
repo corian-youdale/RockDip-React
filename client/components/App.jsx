@@ -3,14 +3,15 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Nav from './Nav'
+import Homepage from './Homepage'
 
 // import { fetchUser } from '../actions'
 
 export class App extends React.Component {
 
-  // state = {
-  //   fruits: []
-  // }
+  state = {
+    user: []
+  }
 
   componentDidMount () {
     // this.props.dispatch(fetchUser())
@@ -23,7 +24,7 @@ export class App extends React.Component {
           <Route path="/" component={Nav}/>
 
           <Switch>
-            {/* <Route exact path='/' component={HomePage}/> */}
+            <Route exact path='/' component={Homepage}/>
           </Switch>
         </Router>
       </div>
@@ -37,4 +38,4 @@ function mapStateToProps (globalState) {
   }
 }
 
-export default connect(mapStateToProps)(App)
+export default connect(wmapStateToProps)(App)

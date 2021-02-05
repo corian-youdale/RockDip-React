@@ -52,7 +52,10 @@ render () {
 function mapStateToProps(globalState) {
     return {
       // isAuthenticated: globalState.isAuthenticated
+      user: globalState.user
     }
 }
 
-// export default connect(mapStateToProps)(Nav)
+export default connect(mapStateToProps)(Nav)
+// export default connect()(Nav)
+
