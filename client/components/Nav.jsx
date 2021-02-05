@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Link } from 'react-router-dom'
-import { connect } from 'superagent'
+import { connect } from 'react-redux'
 
 class Nav extends React.Component {
 

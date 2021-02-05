@@ -24,7 +24,7 @@ export class App extends React.Component {
           <Route path="/" component={Nav}/>
 
           <Switch>
-            <Route exact path='/' component={Homepage}/>
+            {/* <Route exact path='/' component={Homepage}/> */}
           </Switch>
         </Router>
       </div>
@@ -38,4 +38,4 @@ function mapStateToProps (globalState) {
   }
 }
 
-export default connect(wmapStateToProps)(App)
+export default connect(mapStateToProps)(App)
