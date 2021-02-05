@@ -15,26 +15,25 @@ render () {
             <div className="slogan">
               <h2>Because Rock Beats Chip</h2>
             </div>
-            <div className="navBar">
-                <nav>
+                <nav className="navBar">
                     <div className="nav-logo">
                         <Link to="/">
                             <img src="images/RockDipLogoBold_white.png"/>
                         </Link>
                     </div>
-                    <div className="nav-shop">
+                    <div className="text">
                         {/* Link to shop */}
                         <span> Shop </span>
                     </div>
-                    <div className="nav-about">
+                    <div className="text">
                         {/* Link to About */}
                         <span> About </span>
                     </div>
-                    <div className="nav-faq">
+                    <div className="text">
                         {/* Link to FAQ */}
                         <span> FAQ / Testimonials </span>
                     </div>
-                    <div className="nav-signup">
+                    <div className="text">
                         {/* Link to Signup */}
                         <span> Sign Up </span>
                     </div>
@@ -43,7 +42,6 @@ render () {
                         {/* Your account logo, conditional if logged in */}
                     </div>
                 </nav>
-            </div>
         </header>
       </>
     )

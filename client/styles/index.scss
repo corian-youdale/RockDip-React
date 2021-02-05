@@ -4,3 +4,33 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
 }
+
+.navBar {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  height: 5vw;
+  width: 100vw;
+  width: fill;
+  box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.15);
+  background: rgba(252, 252, 252, 1);
+  // font-family: 
+
+  div {
+    height: 100%;
+    display: flex;
+    flex: 1 1 auto;
+    align-content: center;
+    margin: auto 20px;
+    align-items: center;
+  }
+
+  .text {
+    flex-direction: row-reverse;
+  }
+
+  img {
+    height: 5vw;
+    width: 7vw;
+  }
+}
