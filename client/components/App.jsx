@@ -1,49 +1,31 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import ReactSVG from 'react-svg'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import { fetchFruits } from '../actions'
+import Nav from './Nav'
 
-import RockDipLogo from "../../server/public/Images/RockDip_Logo_01"
+// import { fetchUser } from '../actions'
 
 export class App extends React.Component {
-  state = {
-    fruits: []
-  }
+
+  // state = {
+  //   fruits: []
+  // }
 
   componentDidMount () {
-    this.props.dispatch(fetchFruits())
+    // this.props.dispatch(fetchUser())
   }
 
   render () {
     return (
       <div className='app'>
-        <header>
-          <div>
-            {/* Logo & or photo */}
-          </div>
-          <div className="slogan">
-            <h2>Because Rock Beats Chip</h2>
-          </div>
-          <div className="navBar">
-            <nav>
-              <div>
-                <a className="navBar-left">
-                  <img src="server/public/Images/RockDip_Logo_01.svg"></img>
-                  <img src="../../server/public/Images/RockDip_Logo_01.svg"></img>
-                  <ReactSVG src={RockDipLogo} />
-                </a>
-              </div>
-            </nav>
-          </div>
-        </header>
+        <Router>
+          <Route path="/" component={Nav}/>
 
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {this.props.fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
+          <Switch>
+            {/* <Route exact path='/' component={HomePage}/> */}
+          </Switch>
+        </Router>
       </div>
     )
   }
@@ -51,7 +33,7 @@ export class App extends React.Component {
 
 function mapStateToProps (globalState) {
   return {
-    fruits: globalState.fruits
+    user: globalState.user,
   }
 }
 
