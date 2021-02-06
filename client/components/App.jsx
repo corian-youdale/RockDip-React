@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
 import Nav from './Nav'
+import About from './About'
 import Homepage from './Homepage'
 
 // import { fetchUser } from '../actions'
@@ -24,6 +25,9 @@ export class App extends React.Component {
           <Route path="/" component={Nav}/>
 
           <Switch>
+            <Route exact path='/' component={Homepage}/>
+            <Route exact path="/about" component={About}/>
+            {/* <Route exact path='/' component={Homepage}/> */}
             {/* <Route exact path='/' component={Homepage}/> */}
           </Switch>
         </Router>

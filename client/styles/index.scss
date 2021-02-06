@@ -1,20 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700&display=swap');
+@import url('http://fonts.cdnfonts.com/css/atami');
+
+
+// MUST CREDIT PHOTO AUTHOR in footer:
+// <a href='https://pngtree.com/so/outdoor'>outdoor png from pngtree.com</a>
+
+a {
+  color: inherit;
+}
 
 html, 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Atami', sans-serif;
+  
 }
 
+.homepage {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  font-weight: 10vw;
+  font-size: 7vw;
+
+  .brandName {
+    margin-right: 5vw;
+  }
+}
+
+.headerBackground {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  text-align: center;
+  // justify-content: center;
+  margin: 2vw 0 2vw 0;
+}
+
+.header {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin: 2vw 0 2vw 0;
+  // background-image: url("../../server/public/images/headerBackground.png");
+  
+  .slogan {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    margin: auto 0 auto 2vw;
+    font-size: 3vw;
+  }
+  
+}
 .navBar {
   display: flex;
   flex: 1 1 auto;
   flex-direction: row;
-  height: 5vw;
+  height: 4vw;
   width: 100vw;
   width: fill;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.15);
-  background: rgba(252, 252, 252, 1);
-  // font-family: 
+  background-color: #223a1ff8;
+  border-radius: 8px;
 
   div {
     height: 100%;
@@ -27,10 +76,15 @@ body {
 
   .text {
     flex-direction: row-reverse;
+    text-transform: uppercase;
+    text-decoration-line: underline;
+    font-weight: bold;
+    font-size: 1.1vw;
   }
 
   img {
-    height: 5vw;
-    width: 7vw;
+    margin-left: 2vw;
+    height: 3vw;
+    width: 5vw;
   }
 }

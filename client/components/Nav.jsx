@@ -2,23 +2,18 @@ import React from 'react'
 import { Route, Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
+// import headerbackground from '../../server/public/images/headerBackground'
+
 class Nav extends React.Component {
 
 
 render () {
     return (
       <>
-        <header>
-            <div>
-              {/* Logo & or photo */}
-            </div>
-            <div className="slogan">
-              <h2>Because Rock Beats Chip</h2>
-            </div>
                 <nav className="navBar">
                     <div className="nav-logo">
                         <Link to="/">
-                            <img src="images/RockDipLogoBold_white.png"/>
+                            <img src="images/RockDipLogoBold_white.png" />
                         </Link>
                     </div>
                     <div className="text">
@@ -26,8 +21,9 @@ render () {
                         <span> Shop </span>
                     </div>
                     <div className="text">
-                        {/* Link to About */}
-                        <span> About </span>
+                        <Link to="/about">
+                          <span> About </span>
+                        </Link>
                     </div>
                     <div className="text">
                         {/* Link to FAQ */}
@@ -42,7 +38,6 @@ render () {
                         {/* Your account logo, conditional if logged in */}
                     </div>
                 </nav>
-        </header>
       </>
     )
   }
