@@ -17,8 +17,9 @@ render () {
                         </Link>
                     </div>
                     <div className="text">
-                        {/* Link to shop */}
-                        <span> Shop </span>
+                        <Link to="/shop">
+                            <span> Shop </span>
+                        </Link>
                     </div>
                     <div className="text">
                         <Link to="/about">
@@ -26,12 +27,14 @@ render () {
                         </Link>
                     </div>
                     <div className="text">
-                        {/* Link to FAQ */}
-                        <span> FAQ / Testimonials </span>
+                        <Link to="/faq">
+                            <span> {'FAQ & Testimonials'}</span>
+                        </Link>
                     </div>
                     <div className="text">
-                        {/* Link to Signup */}
-                        <span> Sign Up </span>
+                        <Link to="/signup">
+                            <span> Sign Up </span>
+                        </Link>
                     </div>
                     <div>
                         {/* Shopping cart logo, conditional if logged in */}
@@ -50,5 +53,4 @@ function mapStateToProps(globalState) {
 }
 
 export default connect(mapStateToProps)(Nav)
-// export default connect()(Nav)
 
