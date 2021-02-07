@@ -11,10 +11,11 @@ class About extends React.Component {
 
 render () {
     return (
-        <>
-            <div className="about">
+        <><div className="about">
+            <div className="title">
                 <h1>What on earth is RockDip?</h1>
             </div>
+        </div>
         </>
     )
 }

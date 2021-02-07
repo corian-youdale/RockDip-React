@@ -7,7 +7,9 @@ class Shop extends React.Component{
         return(
             <>
                 <div className="shop">
-                    <h1>Shop Goes Here</h1>
+                    <div className="title">
+                        <h1>Shop Goes Here</h1>
+                    </div>
                 </div>
             </>
         )

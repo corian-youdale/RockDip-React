@@ -7,7 +7,9 @@ class SignUp extends React.Component{
         return(
             <>
                 <div className="signup">
-                    <h1>Sign Up Goes Here</h1>
+                    <div className="title">
+                        <h1>Sign Up Goes Here</h1>
+                    </div>
                 </div>
             </>
         )
